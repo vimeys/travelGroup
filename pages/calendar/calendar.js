@@ -12,7 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.dateData()
+    // this.dateData()
+      this.getData()
   },
 
     dateData: function () {
@@ -119,6 +120,47 @@ Page({
         })
     },
 
+    getData(){
+      let arr=[]
+        let newDate=new Date();
+        let year=newDate.getFullYear();
+        let month=newDate.getMonth()+4;
+        console.log(month);
+        // year=2016;
+        // month=2
+        let monthDays=this.getMonthDays(year,month)
+        console.log(monthDays);
+        let lastDays=this.getMonthDays(year,month-1)
+        let firstDays=this.firstDay(year,month);
+        console.log(firstDays);
+        let col =Math.ceil(monthDays/7);
+        let b=1
+        for(let i=0;i<col;i++) { //表格的行
+            for(let k=0;k<7;k++) { //表格每行的单元格
+                let idx=i*7+k; //单元格自然序列号
+                let date_str=idx-firstDays+1;//计算日期
+                // break
+                // ( || ) ? arr[idx]="" : arr[idx]=idx-firstDays+1; //过滤无效日期（小于等于零的、大于月总天数的）
+                if(date_str<0){
+                    arr[idx]=lastDays
+                }else if(date_str>=monthDays){
+                    arr[idx]=1
+                }else {
+                    arr[idx]=b++;
+                }
+            }
+        }
+        console.log(arr);
+        // console.log(monthDays,firstDays);
+    },
+    // 获取当前月份
+    getMonthDays(year,month){
+        let date=new Date(year,month,0)
+         return date.getDate()
+    },
+    firstDay(year,month){
+       return new Date(year,month,1).getDay()
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
