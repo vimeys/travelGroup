@@ -121,43 +121,39 @@ Page({
     },
 
     getData(){
-      let arr=[]
+      let date=[]
+        let temp=[]
         let newDate=new Date();
         let year=newDate.getFullYear();
-        let month=newDate.getMonth()+4;
-        console.log(month);
-        // year=2016;
-        // month=2
-        let monthDays=this.getMonthDays(year,month)
-        console.log(monthDays);
+        let month=newDate.getMonth();
+        let days=this.getMonthDays(year,month);
+        let weekDay=this.firstDay(year,month);
         let lastDays=this.getMonthDays(year,month-1)
-        let firstDays=this.firstDay(year,month);
-        console.log(firstDays);
-        let col =Math.ceil(monthDays/7);
-        let b=1
-        for(let i=0;i<col;i++) { //表格的行
-            for(let k=0;k<7;k++) { //表格每行的单元格
-                let idx=i*7+k; //单元格自然序列号
-                let date_str=idx-firstDays+1;//计算日期
-                // break
-                // ( || ) ? arr[idx]="" : arr[idx]=idx-firstDays+1; //过滤无效日期（小于等于零的、大于月总天数的）
-                if(date_str<0){
-                    arr[idx]=lastDays
-                }else if(date_str>=monthDays){
-                    arr[idx]=1
-                }else {
-                    arr[idx]=b++;
-                }
-            }
+        for(let i=weekDay-1;i>=0;i--){
+            temp.push(lastDays-i)
         }
-        console.log(arr);
-        // console.log(monthDays,firstDays);
+        for (let j=1;j<days;j++){
+            if(temp.length>=7){
+                date.push(temp)
+                temp=[]
+            }
+            temp.push(j)
+        }
+        let a=0
+        while (temp.length<7){
+            temp.push(a++)
+        }
+        date.push(temp)
+        this.setData({
+            date:date
+        })
     },
-    // 获取当前月份
+    // 获取当前月份天数
     getMonthDays(year,month){
-        let date=new Date(year,month,0)
+        let date=new Date(year,month+1,0)
          return date.getDate()
     },
+    // 获取每月第一天是星期几
     firstDay(year,month){
        return new Date(year,month,1).getDay()
     },
