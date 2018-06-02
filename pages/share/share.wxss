@@ -1,0 +1,10 @@
+/* pages/share/share.wxss */
+page{
+    background: #ededea;
+}
+.border{
+    width:710rpx;
+    margin: 0 auto;
+    background: #fff;
+    padding-top: 20rpx;
+}

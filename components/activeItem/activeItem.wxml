@@ -1,0 +1,7 @@
+<view class="active-li" bindtap="href">
+    <image src="../../pages/images/active1.jpg"></image>
+    <view class="active-li-card">
+        <view class="active-li-title">【端午特别贴】 <text>色大惊四大龙卷风</text></view>
+        <view class="active-li-content">成都晋中|6.16-24</view>
+    </view>
+</view>

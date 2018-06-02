@@ -1,0 +1,8 @@
+<import src='/template/list.wxml' />
+<view class="border">
+    <template is="template-comment-cells" data="{{list}}"></template>
+</view>
+
+<template is='template-comment-cells'
+          data='{{media:"img-wrap-2"}}'>
+</template>

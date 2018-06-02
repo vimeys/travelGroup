@@ -1,0 +1,4 @@
+<view class="server-btn">
+    客服
+    <button  open-type="contact" class="btn" ></button>
+</view>

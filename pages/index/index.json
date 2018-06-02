@@ -1,0 +1,7 @@
+{
+  "usingComponents":{
+    "searchHeader":"../../components/searchHeader/searchHeader",
+    "activeItem":"../../components/activeItem/activeItem",
+    "serverBtn":"../../components/serverBtn/serverBtn"
+  }
+}

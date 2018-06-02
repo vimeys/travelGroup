@@ -1,0 +1,20 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  circular="{{circular}}" bindchange='bind_current'>
+    <block wx:for="{{imgUrls}}">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image" mode='aspectFill' />
+        </swiper-item>
+    </block>
+</swiper>
+<view class="detail-titles">
+    <view class="detail-title">【我们好好的】<text>施蒂利克放假啊时代峻峰</text></view>
+    <view>活动费：¥2880/人</view>
+    <view>早鸟价：<text>¥2880/人</text></view>
+    <view>
+        <view class="detail-title-star">难度：
+            <block>
+                <image src=""></image>
+            </block>
+
+        </view>
+    </view>
+</view>

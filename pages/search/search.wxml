@@ -1,2 +1,17 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<searchHeader isShow="{{isShow}}"></searchHeader>
+<view class="search-nav">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="search-time">集合时间
+            <image mode="widthFix" src="../images/icon/arrow-black.png"></image>
+        </view>
+    </picker>
+    <picker bindchange="bindPickerChange"
+            value="{{index}}"
+            range="{{array}}">
+        <view class="search-day">活动天数
+            <image mode="widthFix" src="../images/icon/arrow-black.png"></image>
+        </view>
+    </picker>
+</view>
+<activeItem></activeItem>
+<activeItem></activeItem>

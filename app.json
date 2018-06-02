@@ -1,13 +1,48 @@
 {
   "pages":[
-    "pages/calendar/calendar",
+    "pages/details/details",
+    "pages/share/share",
     "pages/index/index",
-    "pages/search/search"
+    "pages/calendar/calendar",
+    "pages/search/search",
+    "pages/team/team",
+    "pages/my/my"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarBackgroundColor": "#e85701",
+    "navigationBarTitleText": "YAK户外",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#000000",
+    "backgroundColor": "#FAFAFA",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath":"pages/images/icon/activity.png",
+        "selectedIconPath":"pages/images/icon/activity-chosen.png"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "text": "分享",
+        "iconPath": "pages/images/icon/share1.png",
+        "selectedIconPath": "pages/images/icon/share1-chosen.png"
+      },
+      {
+        "pagePath": "pages/team/team",
+        "text": "领队",
+        "iconPath": "pages/images/icon/leader.png",
+        "selectedIconPath": "pages/images/icon/leader-chosen.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/images/icon/mine.png",
+        "selectedIconPath": "pages/images/icon/mine-chosen.png"
+      }]
+      }
 }

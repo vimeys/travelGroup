@@ -1,0 +1,30 @@
+/* pages/details/details.wxss */
+.slide-image{
+    width: 100%;
+    height: 300rpx;
+}
+.section-swiper swiper {
+    height: 300rpx;
+    padding: 20rpx 0rpx;
+    margin-left: -20rpx;
+    margin-right: -20rpx;
+}
+
+.section-swiper swiper::before {
+    display: none;
+}
+
+.section-swiper swiper-item {
+    height: 320rpx;
+    box-sizing: border-box;
+    padding: 0 10rpx 0 10rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.section-swiper swiper-item .slide-image {
+    border-radius: 20rpx;
+    overflow: hidden;
+    width: 100%;
+    height: 300rpx;
+}

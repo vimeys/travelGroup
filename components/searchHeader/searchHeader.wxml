@@ -1,0 +1,19 @@
+<view class="searchHeader">
+    <view class="search-type">
+        <picker class='picker' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">类型
+                <image class='push' mode='widthFix' src="../../pages/images/icon/arrow-white.png"></image>
+            </view>
+        </picker>
+    </view>
+    <view wx:if="{{isShow}}"
+          class="search-input {{isShow?'':'search-input-long'}}"
+          bindtap="">
+        <input type="text"
+               placeholder="搜索/目的地、主题、景点"/>
+    </view>
+    <view wx:else class="search-input "><input type="text" placeholder="搜索/目的地、主题、景点1"/>
+    </view>
+    <view class="search-right" wx:if="{{isShow}}">搜索</view>
+    <view class="search-btn" wx:else >日历</view>
+</view>

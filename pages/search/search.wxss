@@ -1,1 +1,19 @@
 /* pages/search/search.wxss */
+page{
+    background: #ededea;
+}
+.search-nav{
+    width: 100%;
+    padding: 20rpx 0;
+    font-size: 34rpx;
+    display: flex;
+    background: #fff;
+}
+
+.search-time,.search-day{
+    width: 375rpx;
+    text-align: center;
+}
+.search-time image,.search-day image{
+    width: 30rpx;
+}
